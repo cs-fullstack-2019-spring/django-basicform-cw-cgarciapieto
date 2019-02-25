@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% csrf_token %}
+{% for eachAccount in allAccounts %}
+<p>{{ eachAccount.name }} {{ eachAccount.savings }}
+{{ eachAccount.checking }} </p>
+{% endfor %}
+</body>
+</html>
