@@ -9,7 +9,9 @@
 <form action ="{% url helloAccounts %} " method = 'post'>
     {% csrf_token %}
     {% for eachAccount in allAccounts %}
-    <p>{{ eachAccount.name }}</p>
+    <p>{{ eachAccount.name }}
+        {{ eachAccount.checking }} <a href="{% url 'addFive' eachAccount.id %} ">Add</a>
+    </p>
     {% endfor %}
     <input type ="text"  name ="AccountName">
 
