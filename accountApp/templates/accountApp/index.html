@@ -6,7 +6,7 @@
 </head>
 <body>
 <!--formthat takes account name -->
-<form action ="{% url helloAccounts %} " method = 'post'>
+<form action ="{% url helloAccounts %}" method = 'post'>
     {% csrf_token %}
     {% for eachAccount in allAccounts %}
     <p>{{ eachAccount.name }}
